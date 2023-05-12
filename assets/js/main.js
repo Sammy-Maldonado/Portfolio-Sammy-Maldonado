@@ -263,19 +263,33 @@
 
 /* Read more btn */
 
-let hideText_btn = document.getElementById("hideText_btn");
+let hideText_btn1 = document.getElementById("hideText_btn");
+let hideText1 = document.getElementById("hideText1");
 
-let hideText = document.getElementById("hideText");
+let hideText_btn2 = document.getElementById("hideText_btn");
+let hideText2 = document.getElementById("hideText2");
 
-hideText_btn.addEventListener("click", toggleText);
+hideText_btn1.addEventListener("click", toggleText1);
+hideText_btn2.addEventListener("click", toggleText2);
 
-function toggleText() {
-  hideText.classList.toggle("show")
+function toggleText1() {
+  hideText1.classList.toggle("show")
 
-  if (hideText.classList.contains("show")) {
-    hideText_btn.innerHTML = "Read Less";
+  if (hideText1.classList.contains("show")) {
+    hideText_btn1.innerHTML = "Read Less";
   } else {
-    hideText_btn.innerHTML = "Read More";
+    hideText_btn1.innerHTML = "Read More";
+    document.getElementById("title__id").scrollIntoView();
+  }
+}
+
+function toggleText2() {
+  hideText2.classList.toggle("show")
+
+  if (hideText2.classList.contains("show")) {
+    hideText_btn2.innerHTML = "Read Less";
+  } else {
+    hideText_btn2.innerHTML = "Read More";
     document.getElementById("title__id").scrollIntoView();
   }
 }
