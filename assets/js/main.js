@@ -269,14 +269,19 @@ let hideText1 = document.getElementById("hideText1");
 let hideText_btn2 = document.getElementById("hideText_btn");
 let hideText2 = document.getElementById("hideText2");
 
+let hideText_btn3 = document.getElementById("hideText_btn");
+let hideText3 = document.getElementById("hideText3");
+
 hideText_btn1.addEventListener("click", toggleText1);
 hideText_btn2.addEventListener("click", toggleText2);
+hideText_btn3.addEventListener("click", toggleText3);
 
 function toggleText1() {
   hideText1.classList.toggle("show")
 
   if (hideText1.classList.contains("show")) {
-    hideText_btn1.innerHTML = "Read Less";
+    hideText_btn1.innerHTML = "Leer Menos";
+    document.getElementById("title__id").scrollIntoView();
   } else {
     hideText_btn1.innerHTML = "Read More";
     document.getElementById("title__id").scrollIntoView();
@@ -287,9 +292,20 @@ function toggleText2() {
   hideText2.classList.toggle("show")
 
   if (hideText2.classList.contains("show")) {
-    hideText_btn2.innerHTML = "Read Less";
+    hideText_btn2.innerHTML = "Leer Menos";
   } else {
-    hideText_btn2.innerHTML = "Read More";
+    hideText_btn2.innerHTML = "Leer Más";
+    document.getElementById("title__id").scrollIntoView();
+  }
+}
+
+function toggleText3() {
+  hideText3.classList.toggle("show")
+
+  if (hideText3.classList.contains("show")) {
+    hideText_btn3.innerHTML = "Leer Menos";
+  } else {
+    hideText_btn3.innerHTML = "Leer Más";
     document.getElementById("title__id").scrollIntoView();
   }
 }
