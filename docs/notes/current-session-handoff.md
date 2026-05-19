@@ -1,142 +1,87 @@
 # Current Session Handoff
 
-## Objective
+## Current State
 
-Refactor the current React + Vite portfolio so it visually matches the original static iPortfolio HTML/CSS template as closely as possible.
+The portfolio modernization is **complete and live in production.**
 
-This is a **faithful React port, not a redesign.**
-
-The first migration (commit `17dbf8b`) produced a generic dark SaaS landing page. This session corrects that.
-
----
-
-## Approved Constraints
-
-- Work only on branch `feature/portfolio-react-bilingual-modernization`
-- Do not create a worktree
-- Do not push
-- Do not merge
-- Do not delete old static files
-- Work in small, reviewable steps
-- English is the default language
-- Spanish must be fully available via language switcher
-- All content from `docs/content/professional-content.md` must remain
-- No invented experience, dates, certifications or claims
-- No exposed secrets or API keys
+- Branch `feature/portfolio-react-bilingual-modernization` has been merged to `main` and deleted
+- Deployed on Netlify at https://portfolio-sammy-maldonado.netlify.app/
+- Node 22 LTS enforced via `netlify.toml`
 
 ---
 
-## Visual Parity Requirements
+## What Was Built
 
-| Element | Original iPortfolio | Must Preserve |
-|---|---|---|
-| Layout | Fixed left sidebar 300px, dark `#040b14` | Yes |
-| Main content | `margin-left: 300px`, white/light bg | Yes |
-| Hero | Full viewport, background image + dark overlay + typed text | Yes |
-| Sections | 60px padding, white + `#f5f8fd` alt bg | Yes |
-| Section headings | Raleway, `#173b6c`, blue bottom accent line | Yes |
-| Sidebar nav | Icons + labels, `#a8a9b4` text, `#149ddd` active/hover | Yes |
-| Profile area | Circular photo, name, social icon links in sidebar | Yes |
-| Skills | Horizontal progress bars | Yes |
-| Experience | Resume timeline (left border + dots, date badges) | Yes |
-| Projects | Image grid with hover overlay | Yes |
-| Contact | Info box layout (icon + heading + value) | Yes |
-| Fonts | Open Sans (body), Raleway (headings), Poppins (specials) | Yes |
-| Accent color | `#149ddd` (cyan-blue) | Yes |
-| Mobile nav | Sidebar slides in, toggle button fixed top-right | Yes |
+A React 18 + Vite 6 bilingual SPA, visually faithful to the iPortfolio template.
 
----
-
-## Content Requirements (must remain after visual fix)
-
-- English default, Spanish via switcher
-- Language switcher integrated as sidebar nav item (globe icon)
-- `sammy.maldodev@gmail.com` as developer email
-- WhatsApp: `https://wa.me/353834872041` (Irish number)
-- POS Cloud ITD as main featured project
-- Agentic Development section (styled as a standard iPortfolio section)
-- No Chile-based contact info (no Santiago, no +569 number)
-- Ireland as location
-
----
-
-## Files Planned to Change
-
-| File | Change |
+| Section | Status |
 |---|---|
-| `src/styles/global.css` | Replace with iPortfolio CSS ported from `assets/css/style.css` |
-| `index.html` | Restore Open Sans + Raleway + Poppins fonts; link vendored Bootstrap Icons + Boxicons |
-| `src/components/Header.jsx` | Rebuild as fixed left sidebar |
-| `src/components/Hero.jsx` | Rebuild with background image, dark overlay, typed animation |
-| `src/components/About.jsx` | Two-column layout with info list |
-| `src/components/Skills.jsx` | Progress bar style |
-| `src/components/AgenticDevelopment.jsx` | Standard iPortfolio section style (new section) |
-| `src/components/Experience.jsx` | Resume timeline style |
-| `src/components/Projects.jsx` | Portfolio grid with hover overlay |
-| `src/components/Certifications.jsx` | Resume timeline items (merged into Experience section) |
-| `src/components/Contact.jsx` | Info box layout |
-| `src/components/Footer.jsx` | Minimal, matches original |
-| `src/App.jsx` | Update section IDs, structure |
+| Hero | Full viewport, background image, dark overlay, typed animation, CV download button |
+| About | Two-column, full-width intro paragraphs, info list |
+| Key Skills | Honest progress bars (React 88%, Node 88%, .NET 85%, PostgreSQL 88%, AWS 72%, Git 90%) |
+| Agentic Development | Custom section, styled as standard iPortfolio section |
+| Professional Experience | LinkedIn-style timeline (date badge above company name) |
+| Featured Projects | Elevated card design — 1 personal (POS Cloud ITD) + 3 enterprise (lock icon, no GitHub) |
+| Certifications | Same timeline as Experience, no section-bg |
+| Contact | Flex card layout with hover icon animation |
+| Header/Sidebar | Fixed 300px dark sidebar — profile, social links, nav, CV download, language switcher |
+| Footer | Removed entirely (was overlapping sidebar on mobile) |
 
-## Files to Create
+---
 
-| File | Purpose |
+## Architecture
+
+```
+src/
+  components/       React components (one per section)
+  context/          LanguageContext.jsx — i18n via React Context + localStorage
+  data/             content.js — single source of truth for all EN/ES text
+  styles/
+    iportfolio.css  Ported iPortfolio CSS
+    additions.css   React-specific overrides, new sections, card designs
+```
+
+- No external i18n library — custom Context with `{ t, toggleLang }`
+- No typed.js — pure React `useState`/`useEffect` animation
+- Bootstrap Icons + Boxicons loaded from `public/vendor/`
+- All images in `public/`
+
+---
+
+## Key Files
+
+| File | Role |
 |---|---|
-| `src/styles/iportfolio.css` | Ported from `assets/css/style.css` — preserves all original rules |
-| `src/styles/additions.css` | New sections + language switcher + React-specific overrides only |
-
-## Assets to Copy to `public/`
-
-| Source | Destination |
-|---|---|
-| `assets/img/sammy-maldonado-banner.jpg` | `public/sammy-maldonado-banner.jpg` |
-| `assets/vendor/bootstrap-icons/` | `public/vendor/bootstrap-icons/` |
-| `assets/vendor/boxicons/` | `public/vendor/boxicons/` |
+| `src/data/content.js` | All EN/ES text, project data, experience, certifications |
+| `src/styles/iportfolio.css` | Base iPortfolio styles |
+| `src/styles/additions.css` | Card designs, timeline styles, contact layout, CV button |
+| `src/components/Header.jsx` | Sidebar, mobile nav, CV link, language switcher |
+| `src/components/Hero.jsx` | Typed animation, CV download button |
+| `src/components/Projects.jsx` | Elevated cards, private repo lock badge |
+| `netlify.toml` | `NODE_VERSION = "22"` — required for Vite 6 |
 
 ---
 
-## Validation Checklist
+## CV Link
 
-Before marking complete:
+Google Drive (public):
+`https://drive.google.com/file/d/1Db4XEB_nO8X6htZksyZUUnC7DRrkndrh/view?usp=sharing`
 
-- [ ] `npm run build` passes without errors
-- [ ] Left sidebar is visible and fixed on desktop
-- [ ] Sidebar has profile image, name, social links, nav links with icons
-- [ ] Hero shows background image with dark overlay
-- [ ] Main content area has white/light background (not dark)
-- [ ] Section headings use Raleway font, `#173b6c` color
-- [ ] Skills section shows horizontal progress bars
-- [ ] Experience section shows resume timeline style
-- [ ] Projects section shows image grid with hover overlays
-- [ ] Agentic Development section fits naturally into original design
-- [ ] Language switcher is in the sidebar as a nav item
-- [ ] English is default language on load
-- [ ] Spanish switch works across all sections
-- [ ] Language preference persists after refresh
-- [ ] No Chile/outdated contact info in any language
-- [ ] `sammy.maldodev@gmail.com` is present
-- [ ] Irish WhatsApp link is present
-- [ ] POS Cloud ITD appears as main featured project
-- [ ] Mobile nav toggle works (sidebar slides in)
-- [ ] No push, merge or worktree performed
-- [ ] Git status is clean or clearly explained
+Hardcoded in `Header.jsx` (constant `CV_URL`) and `Hero.jsx`.
 
 ---
 
-## Next Steps (after this session)
+## Pending Items
 
-1. Push branch and open PR to `main` (after approval)
-2. Create `DEV` branch from `main` and define promotion flow
-3. Clean up obsolete static HTML files (old `index.html`, `portfolio-en/`, individual detail pages)
-4. Consider adding a real contact form (Netlify Forms or Formspree — no exposed keys)
-5. Add a real CV file to `public/` to enable the "Download CV" button
+1. **Mobile audit** — layout not tested on real devices this session
+2. **OG / social preview image** — no `og:image` meta tag for LinkedIn/Twitter sharing
+3. **Contact form** — currently info-display only; no submission capability (Netlify Forms or Formspree are options — no exposed keys)
 
 ---
 
-## Key Reference Files
+## Constraints (carry forward)
 
-- `docs/specs/portfolio-modernization-spec.md` — implementation spec
-- `docs/content/professional-content.md` — approved bilingual content source
-- `CLAUDE.md` — project rules (read before every change)
-- `assets/css/style.css` — original iPortfolio CSS (source of truth for visual design)
-- `assets/js/main.js` — original JS behaviors to recreate in React
+- Do not invent experience, dates, certifications or claims
+- Do not expose private information, secrets, credentials or API keys
+- Content source of truth: `docs/content/professional-content.md`
+- Project rules: `CLAUDE.md`
