@@ -13,15 +13,21 @@ export const content = {
     },
     hero: {
       name: 'Sammy Maldonado',
-      headline: 'Full-Stack Software Developer',
-      subheadline: 'Agentic Development Workflows | Cloud & Backend',
-      summary:
-        'Full-Stack Software Developer based in Ireland with over 4 years of experience building internal applications, REST APIs and cloud-ready solutions. Experienced with React, TypeScript, Node.js, NestJS, .NET, PostgreSQL, AWS and modern agentic development workflows.',
-      ctaPrimary: 'View Projects',
-      ctaSecondary: 'Contact Me',
     },
     about: {
       title: 'About',
+      role: 'Full-Stack Software Developer & Cybersecurity Background',
+      tagline: 'Building scalable, secure and functional applications — accessible on any device, with intuitive and efficient interfaces.',
+      infoLeft: [
+        { label: 'Location', value: 'Ireland' },
+        { label: 'LinkedIn', value: 'linkedin.com/in/sammy-maldonado', href: 'https://www.linkedin.com/in/sammy-maldonado/' },
+        { label: 'Phone', value: '+353 83 487 2041', href: 'https://wa.me/353834872041' },
+      ],
+      infoRight: [
+        { label: 'Experience', value: '4+ years' },
+        { label: 'Email', value: 'sammy.maldodev@gmail.com', href: 'mailto:sammy.maldodev@gmail.com' },
+        { label: 'GitHub', value: 'github.com/Sammy-Maldonado', href: 'https://github.com/Sammy-Maldonado' },
+      ],
       paragraphs: [
         'Full-Stack Software Developer with over 4 years of experience in software development, a cybersecurity background and hands-on experience building internal applications, REST APIs and cloud-ready solutions.',
         'My professional experience includes developing and maintaining enterprise applications, integrating systems with core banking platforms, building backend services and supporting high-impact digital transformation projects.',
@@ -31,21 +37,22 @@ export const content = {
     },
     skills: {
       title: 'Key Skills',
+      intro: 'My main skills as a Full-Stack Software Developer:',
+      bars: [
+        { name: 'React / TypeScript / JavaScript', pct: 90 },
+        { name: 'Node.js / NestJS / Express', pct: 88 },
+        { name: '.NET / C#', pct: 75 },
+        { name: 'PostgreSQL / MSSQL / MongoDB', pct: 85 },
+        { name: 'AWS / Docker / Kubernetes', pct: 78 },
+        { name: 'Git / GitLab / GitHub', pct: 92 },
+      ],
       groups: [
         {
           name: 'Agentic Development',
           items: [
-            'Agentic Development Workflows',
-            'Claude Code',
-            'Prompt Engineering',
-            'Specs-Driven Development',
-            'Skills',
-            'MCP Integrations',
-            'Context7 MCP',
-            'Linear MCP',
-            'Engram',
-            'n8n Automation',
-            'Technical Documentation',
+            'Agentic Development Workflows', 'Claude Code', 'Prompt Engineering',
+            'Specs-Driven Development', 'Skills', 'MCP Integrations',
+            'Context7 MCP', 'Linear MCP', 'Engram', 'n8n Automation', 'Technical Documentation',
           ],
         },
         {
@@ -65,10 +72,6 @@ export const content = {
           items: ['AWS Cloud Computing', 'Docker', 'Kubernetes', 'Git', 'GitHub', 'GitLab', 'CI Validation', 'Release Workflows'],
         },
         {
-          name: 'Delivery & Collaboration',
-          items: ['Agile/Scrum Delivery', 'Professional Scrum Developer', 'Jira', 'Linear', 'Technical Planning', 'Cross-functional Collaboration'],
-        },
-        {
           name: 'Cybersecurity',
           items: ['Cybersecurity Foundations', 'Threat Analysis', 'Secure Development Awareness', 'Basic Network Security'],
         },
@@ -76,8 +79,7 @@ export const content = {
     },
     agentic: {
       title: 'Agentic Development',
-      summary:
-        'Experienced in agentic development workflows, including Claude Code, prompt engineering, specs-driven development, Skills, MCP integrations and n8n automation, applied to software planning, delivery, workflow optimisation and technical documentation.',
+      summary: 'Experienced in agentic development workflows, including Claude Code, prompt engineering, specs-driven development, Skills, MCP integrations and n8n automation, applied to software planning, delivery, workflow optimisation and technical documentation.',
       points: [
         'Use Claude Code to support structured implementation planning and development workflows.',
         'Apply specs-driven development to define clear requirements before coding.',
@@ -120,8 +122,8 @@ export const content = {
           name: 'POS Cloud ITD',
           subtitle: 'Cloud POS Platform',
           type: 'Personal project | 2026 – Present',
-          description:
-            'Cloud-based POS platform focused on secure authentication, licensing and scalable business operations. The project applies agentic development workflows with Claude Code, specs-driven development, MCP integrations and structured Git delivery.',
+          status: 'In Progress',
+          description: 'Cloud-based POS platform focused on secure authentication, licensing and scalable business operations. The project applies agentic development workflows with Claude Code, specs-driven development, MCP integrations and structured Git delivery.',
           highlights: [
             'Built with NestJS, React, TypeScript, Prisma and Supabase/PostgreSQL.',
             'Uses JWT authentication and a licensing-oriented architecture.',
@@ -131,7 +133,6 @@ export const content = {
           ],
           stack: ['NestJS', 'React', 'TypeScript', 'Prisma', 'Supabase', 'PostgreSQL', 'JWT', 'Claude Code', 'Context7 MCP', 'Linear MCP', 'Engram', 'n8n', 'GitHub', 'CI'],
           repo: 'https://github.com/Sammy-Maldonado/POS-Cloud-ITD',
-          status: 'In Progress',
         },
       ],
     },
@@ -150,23 +151,17 @@ export const content = {
     },
     contact: {
       title: 'Contact',
-      description:
-        'Open to software development opportunities in Ireland, especially roles involving full-stack development, backend services, cloud-ready applications and modern agentic development workflows.',
-      email: 'sammy.maldodev@gmail.com',
-      location: 'Ireland',
-      whatsapp: 'https://wa.me/353834872041',
-      linkedin: 'https://www.linkedin.com/in/sammy-maldonado/',
-      github: 'https://github.com/Sammy-Maldonado',
-      labels: {
-        email: 'Email',
-        linkedin: 'LinkedIn',
-        github: 'GitHub',
-        whatsapp: 'WhatsApp',
-        location: 'Location',
-      },
+      description: 'Open to software development opportunities in Ireland, especially roles involving full-stack development, backend services, cloud-ready applications and modern agentic development workflows.',
+      items: [
+        { icon: 'bi bi-geo-alt', label: 'Location', value: 'Ireland', href: null },
+        { icon: 'bi bi-envelope', label: 'Email', value: 'sammy.maldodev@gmail.com', href: 'mailto:sammy.maldodev@gmail.com' },
+        { icon: 'bi bi-phone', label: 'WhatsApp', value: '+353 83 487 2041', href: 'https://wa.me/353834872041' },
+        { icon: 'bi bi-linkedin', label: 'LinkedIn', value: 'linkedin.com/in/sammy-maldonado', href: 'https://www.linkedin.com/in/sammy-maldonado/' },
+        { icon: 'bi bi-github', label: 'GitHub', value: 'github.com/Sammy-Maldonado', href: 'https://github.com/Sammy-Maldonado' },
+      ],
     },
     footer: {
-      text: '© 2026 Sammy Maldonado · Full-Stack Software Developer · Ireland',
+      text: '© 2026 Sammy Maldonado',
     },
   },
 
@@ -184,15 +179,21 @@ export const content = {
     },
     hero: {
       name: 'Sammy Maldonado',
-      headline: 'Desarrollador Full Stack',
-      subheadline: 'Flujos de Desarrollo Agéntico | Cloud & Backend',
-      summary:
-        'Desarrollador Full Stack basado en Irlanda con más de 4 años de experiencia construyendo aplicaciones internas, APIs REST y soluciones preparadas para entornos cloud. Experiencia con React, TypeScript, Node.js, NestJS, .NET, PostgreSQL, AWS y flujos modernos de desarrollo agéntico.',
-      ctaPrimary: 'Ver Proyectos',
-      ctaSecondary: 'Contactarme',
     },
     about: {
       title: 'Sobre mí',
+      role: 'Desarrollador Full Stack & Formación en Ciberseguridad',
+      tagline: 'Construyendo aplicaciones escalables, seguras y funcionales — accesibles desde cualquier dispositivo, con interfaces intuitivas y eficientes.',
+      infoLeft: [
+        { label: 'Ubicación', value: 'Irlanda' },
+        { label: 'LinkedIn', value: 'linkedin.com/in/sammy-maldonado', href: 'https://www.linkedin.com/in/sammy-maldonado/' },
+        { label: 'Teléfono', value: '+353 83 487 2041', href: 'https://wa.me/353834872041' },
+      ],
+      infoRight: [
+        { label: 'Experiencia', value: '4+ años' },
+        { label: 'Correo', value: 'sammy.maldodev@gmail.com', href: 'mailto:sammy.maldodev@gmail.com' },
+        { label: 'GitHub', value: 'github.com/Sammy-Maldonado', href: 'https://github.com/Sammy-Maldonado' },
+      ],
       paragraphs: [
         'Desarrollador Full Stack con más de 4 años de experiencia en desarrollo de software, formación en ciberseguridad y experiencia práctica construyendo aplicaciones internas, APIs REST y soluciones preparadas para entornos cloud.',
         'Mi experiencia profesional incluye el desarrollo y mantenimiento de aplicaciones empresariales, integración de sistemas con plataformas de core bancario, construcción de servicios backend y participación en proyectos de transformación digital de alto impacto.',
@@ -202,21 +203,22 @@ export const content = {
     },
     skills: {
       title: 'Habilidades principales',
+      intro: 'Mis principales habilidades como Desarrollador Full Stack:',
+      bars: [
+        { name: 'React / TypeScript / JavaScript', pct: 90 },
+        { name: 'Node.js / NestJS / Express', pct: 88 },
+        { name: '.NET / C#', pct: 75 },
+        { name: 'PostgreSQL / MSSQL / MongoDB', pct: 85 },
+        { name: 'AWS / Docker / Kubernetes', pct: 78 },
+        { name: 'Git / GitLab / GitHub', pct: 92 },
+      ],
       groups: [
         {
           name: 'Desarrollo Agéntico',
           items: [
-            'Flujos de Desarrollo Agéntico',
-            'Claude Code',
-            'Ingeniería de Prompts',
-            'Specs-Driven Development',
-            'Skills',
-            'Integraciones MCP',
-            'Context7 MCP',
-            'Linear MCP',
-            'Engram',
-            'Automatización con n8n',
-            'Documentación Técnica',
+            'Flujos de Desarrollo Agéntico', 'Claude Code', 'Ingeniería de Prompts',
+            'Specs-Driven Development', 'Skills', 'Integraciones MCP',
+            'Context7 MCP', 'Linear MCP', 'Engram', 'Automatización con n8n', 'Documentación Técnica',
           ],
         },
         {
@@ -236,10 +238,6 @@ export const content = {
           items: ['AWS Cloud Computing', 'Docker', 'Kubernetes', 'Git', 'GitHub', 'GitLab', 'Validación CI', 'Flujos de Release'],
         },
         {
-          name: 'Entrega y colaboración',
-          items: ['Entrega Agile/Scrum', 'Professional Scrum Developer', 'Jira', 'Linear', 'Planificación Técnica', 'Colaboración con Equipos Multidisciplinarios'],
-        },
-        {
           name: 'Ciberseguridad',
           items: ['Fundamentos de Ciberseguridad', 'Análisis de Amenazas', 'Conciencia de Desarrollo Seguro', 'Seguridad Básica de Redes'],
         },
@@ -247,8 +245,7 @@ export const content = {
     },
     agentic: {
       title: 'Desarrollo Agéntico',
-      summary:
-        'Experiencia en flujos de desarrollo agéntico, incluyendo Claude Code, ingeniería de prompts, specs-driven development, Skills, integraciones MCP y automatización con n8n, aplicados a planificación de software, entrega, optimización de workflows y documentación técnica.',
+      summary: 'Experiencia en flujos de desarrollo agéntico, incluyendo Claude Code, ingeniería de prompts, specs-driven development, Skills, integraciones MCP y automatización con n8n, aplicados a planificación de software, entrega, optimización de workflows y documentación técnica.',
       points: [
         'Uso Claude Code para apoyar la planificación estructurada e implementación de funcionalidades.',
         'Aplico specs-driven development para definir requerimientos claros antes de programar.',
@@ -291,8 +288,8 @@ export const content = {
           name: 'POS Cloud ITD',
           subtitle: 'Plataforma POS Cloud',
           type: 'Proyecto personal | 2026 – Presente',
-          description:
-            'Plataforma POS basada en la nube enfocada en autenticación segura, licenciamiento y operaciones comerciales escalables. El proyecto aplica flujos de desarrollo agéntico con Claude Code, specs-driven development, integraciones MCP y entrega estructurada con Git.',
+          status: 'En Progreso',
+          description: 'Plataforma POS basada en la nube enfocada en autenticación segura, licenciamiento y operaciones comerciales escalables. El proyecto aplica flujos de desarrollo agéntico con Claude Code, specs-driven development, integraciones MCP y entrega estructurada con Git.',
           highlights: [
             'Construido con NestJS, React, TypeScript, Prisma y Supabase/PostgreSQL.',
             'Utiliza autenticación JWT y una arquitectura orientada a licenciamiento.',
@@ -302,7 +299,6 @@ export const content = {
           ],
           stack: ['NestJS', 'React', 'TypeScript', 'Prisma', 'Supabase', 'PostgreSQL', 'JWT', 'Claude Code', 'Context7 MCP', 'Linear MCP', 'Engram', 'n8n', 'GitHub', 'CI'],
           repo: 'https://github.com/Sammy-Maldonado/POS-Cloud-ITD',
-          status: 'En Progreso',
         },
       ],
     },
@@ -321,23 +317,17 @@ export const content = {
     },
     contact: {
       title: 'Contacto',
-      description:
-        'Abierto a oportunidades de desarrollo de software en Irlanda, especialmente roles relacionados con desarrollo full-stack, servicios backend, aplicaciones preparadas para cloud y flujos modernos de desarrollo agéntico.',
-      email: 'sammy.maldodev@gmail.com',
-      location: 'Irlanda',
-      whatsapp: 'https://wa.me/353834872041',
-      linkedin: 'https://www.linkedin.com/in/sammy-maldonado/',
-      github: 'https://github.com/Sammy-Maldonado',
-      labels: {
-        email: 'Correo',
-        linkedin: 'LinkedIn',
-        github: 'GitHub',
-        whatsapp: 'WhatsApp',
-        location: 'Ubicación',
-      },
+      description: 'Abierto a oportunidades de desarrollo de software en Irlanda, especialmente roles relacionados con desarrollo full-stack, servicios backend, aplicaciones preparadas para cloud y flujos modernos de desarrollo agéntico.',
+      items: [
+        { icon: 'bi bi-geo-alt', label: 'Ubicación', value: 'Irlanda', href: null },
+        { icon: 'bi bi-envelope', label: 'Correo', value: 'sammy.maldodev@gmail.com', href: 'mailto:sammy.maldodev@gmail.com' },
+        { icon: 'bi bi-phone', label: 'WhatsApp', value: '+353 83 487 2041', href: 'https://wa.me/353834872041' },
+        { icon: 'bi bi-linkedin', label: 'LinkedIn', value: 'linkedin.com/in/sammy-maldonado', href: 'https://www.linkedin.com/in/sammy-maldonado/' },
+        { icon: 'bi bi-github', label: 'GitHub', value: 'github.com/Sammy-Maldonado', href: 'https://github.com/Sammy-Maldonado' },
+      ],
     },
     footer: {
-      text: '© 2026 Sammy Maldonado · Desarrollador Full Stack · Irlanda',
+      text: '© 2026 Sammy Maldonado',
     },
   },
 }

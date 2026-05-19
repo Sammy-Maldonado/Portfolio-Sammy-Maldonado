@@ -1,0 +1,233 @@
+/*
+ * additions.css
+ * React-specific overrides and new sections not in original iPortfolio.
+ * Language switcher, Agentic Development section, typed animation.
+ */
+
+/*--------------------------------------------------------------
+# Language Switcher — integrated as sidebar nav item
+--------------------------------------------------------------*/
+.lang-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+}
+
+.lang-btn i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  color: #fff;
+}
+
+.lang-btn:hover i {
+  color: #149ddd;
+}
+
+/*--------------------------------------------------------------
+# Typed text animation (replaces typed.js)
+--------------------------------------------------------------*/
+.typed-text {
+  border-bottom: 3px solid #149ddd;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.typed-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #149ddd;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/*--------------------------------------------------------------
+# Agentic Development Section
+# Styled as a standard iPortfolio section (same rhythm as Resume)
+--------------------------------------------------------------*/
+.agentic .agentic-intro {
+  font-size: 16px;
+  color: #272829;
+  margin-bottom: 24px;
+  max-width: 760px;
+}
+
+.agentic .agentic-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 28px;
+}
+
+.agentic .agentic-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #272829;
+}
+
+.agentic .agentic-points li i {
+  color: #149ddd;
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.agentic .agentic-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.agentic .tool-chip {
+  background: #e4edf9;
+  color: #173b6c;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 1px solid #c5d8f0;
+}
+
+/*--------------------------------------------------------------
+# Projects — card overlay additions for POS Cloud ITD
+--------------------------------------------------------------*/
+.project-status-badge {
+  display: inline-block;
+  background: #149ddd;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.project-tech-stack .tech-chip {
+  background: #e4edf9;
+  color: #173b6c;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  padding: 3px 10px;
+  border-radius: 4px;
+}
+
+.project-card-inner {
+  padding: 24px;
+  background: #fff;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.project-card-inner h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #050d18;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 4px;
+}
+
+.project-card-inner .project-subtitle {
+  font-size: 14px;
+  color: #149ddd;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.project-card-inner .project-type {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 12px;
+}
+
+.project-card-inner p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.project-card-inner ul {
+  padding-left: 18px;
+  margin-bottom: 12px;
+}
+
+.project-card-inner ul li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.project-card-inner .project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #149ddd;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.project-card-inner .project-link:hover {
+  background: #37b3ed;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Certifications — styled inline with Resume section
+--------------------------------------------------------------*/
+.resume .resume-item .cert-link {
+  font-size: 13px;
+  color: #149ddd;
+  font-weight: 600;
+}
+
+.resume .resume-item .cert-link:hover {
+  color: #37b3ed;
+}
+
+/*--------------------------------------------------------------
+# Mobile nav overlay
+--------------------------------------------------------------*/
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #header {
+  left: 0;
+}

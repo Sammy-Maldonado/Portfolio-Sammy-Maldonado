@@ -5,28 +5,36 @@ export default function Certifications() {
   const c = t.certifications
 
   return (
-    <section id="certifications" className="section section--alt">
+    <section id="certifications" className="resume section-bg">
       <div className="container">
-        <h2 className="section__title">{c.title}</h2>
-        <ul className="certs__list" role="list">
-          {c.items.map((cert, i) => (
-            <li key={i} className="cert-item">
-              <div className="cert-item__info">
-                <span className="cert-item__name">{cert.name}</span>
-                <span className="cert-item__issuer">{cert.issuer}</span>
+
+        <div className="section-title">
+          <h2>{c.title}</h2>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            <h3 className="resume-title">{c.title}</h3>
+            {c.items.map((cert, i) => (
+              <div className="resume-item" key={i}>
+                <h4>{cert.name}</h4>
+                <h5>{cert.year}</h5>
+                <p><em>{cert.issuer}</em></p>
               </div>
-              <span className="cert-item__year">{cert.year}</span>
-            </li>
-          ))}
-        </ul>
-        <a
-          href={c.linkedinUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="certs__more-link"
-        >
-          {c.linkedinLabel} →
-        </a>
+            ))}
+            <p style={{ marginTop: '16px' }}>
+              <a
+                href={c.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cert-link"
+              >
+                {c.linkedinLabel} →
+              </a>
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
   )

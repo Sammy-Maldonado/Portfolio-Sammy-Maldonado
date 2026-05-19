@@ -4,9 +4,9 @@ export default function Footer() {
   const { t } = useLang()
 
   return (
-    <footer className="footer">
+    <footer id="footer">
       <div className="container">
-        <p className="footer__text">{t.footer.text}</p>
+        <div className="copyright">{t.footer.text}</div>
       </div>
     </footer>
   )

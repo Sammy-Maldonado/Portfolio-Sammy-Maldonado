@@ -4,41 +4,33 @@ export default function Contact() {
   const { t } = useLang()
   const c = t.contact
 
-  const links = [
-    { label: c.labels.email, value: c.email, href: `mailto:${c.email}`, icon: '✉' },
-    { label: c.labels.linkedin, value: 'linkedin.com/in/sammy-maldonado', href: c.linkedin, icon: '💼' },
-    { label: c.labels.github, value: 'github.com/Sammy-Maldonado', href: c.github, icon: '⌨' },
-    { label: c.labels.whatsapp, value: '+353 83 487 2041', href: c.whatsapp, icon: '💬' },
-    { label: c.labels.location, value: c.location, href: null, icon: '📍' },
-  ]
-
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="contact">
       <div className="container">
-        <h2 className="section__title">{c.title}</h2>
-        <p className="contact__description">{c.description}</p>
-        <ul className="contact__list" role="list">
-          {links.map(link => (
-            <li key={link.label} className="contact__item">
-              <span className="contact__icon" aria-hidden="true">{link.icon}</span>
-              <div className="contact__info">
-                <span className="contact__label">{link.label}</span>
-                {link.href ? (
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith('mailto') ? undefined : '_blank'}
-                    rel="noopener noreferrer"
-                    className="contact__value contact__value--link"
-                  >
-                    {link.value}
-                  </a>
-                ) : (
-                  <span className="contact__value">{link.value}</span>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
+
+        <div className="section-title">
+          <h2>{c.title}</h2>
+          <p>{c.description}</p>
+        </div>
+
+        <div className="row justify-content-center">
+          <div className="col-lg-7 d-flex align-items-stretch">
+            <div className="info">
+              {c.items.map(item => (
+                <div className={item.icon.split(' ')[1].replace('bi-', '')} key={item.label} style={{ marginBottom: '20px' }}>
+                  <i className={item.icon} />
+                  <h4>{item.label}:</h4>
+                  <p>
+                    {item.href
+                      ? <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">{item.value}</a>
+                      : item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   )
