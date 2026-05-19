@@ -14,12 +14,13 @@ export default function Experience() {
 
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="resume-title">{e.title}</h3>
             {e.items.map((job, i) => (
               <div className="resume-item" key={i}>
-                <h4>{job.role}</h4>
-                <h5>{job.dates}</h5>
-                <p><em>{job.company}</em></p>
+                <span className="resume-dates">{job.dates}</span>
+                <div className="resume-item-header">
+                  <span className="resume-company">{job.company}</span>
+                </div>
+                <p className="resume-role">{job.role}</p>
                 <ul>
                   {job.bullets.map((b, j) => (
                     <li key={j}>{b}</li>

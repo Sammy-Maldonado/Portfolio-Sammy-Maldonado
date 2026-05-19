@@ -8,7 +8,6 @@ import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
-import Footer from './components/Footer'
 import './styles/iportfolio.css'
 import './styles/additions.css'
 
@@ -26,7 +25,7 @@ export default function App() {
         <Certifications />
         <Contact />
       </main>
-      <Footer />
+      {/* Footer removed — copyright shown in sidebar via iPortfolio fixed footer */}
     </LanguageProvider>
   )
 }

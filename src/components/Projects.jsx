@@ -30,14 +30,23 @@ export default function Projects() {
                     <span key={tech} className="tech-chip">{tech}</span>
                   ))}
                 </div>
-                <a
-                  href={project.repo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  <i className="bi bi-github" /> GitHub
-                </a>
+                {project.repo
+                  ? (
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link"
+                    >
+                      <i className="bi bi-github" /> GitHub
+                    </a>
+                  )
+                  : (
+                    <span className="project-link-private">
+                      <i className="bi bi-lock" /> Private Repository
+                    </span>
+                  )
+                }
               </div>
             </div>
           ))}

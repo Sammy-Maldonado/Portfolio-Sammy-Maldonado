@@ -12,6 +12,8 @@ const NAV_ITEMS = [
   { key: 'contact',        id: 'contact',        icon: 'bx bx-envelope' },
 ]
 
+const CV_URL = 'https://drive.google.com/file/d/1Db4XEB_nO8X6htZksyZUUnC7DRrkndrh/view?usp=sharing'
+
 export default function Header() {
   const { t, toggleLang } = useLang()
   const [activeId, setActiveId] = useState('hero')
@@ -97,6 +99,19 @@ export default function Header() {
                   </a>
                 </li>
               ))}
+
+              {/* CV download link */}
+              <li>
+                <a
+                  href={CV_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-link scrollto"
+                >
+                  <i className="bx bx-download" />
+                  <span>{t.nav.cv}</span>
+                </a>
+              </li>
 
               {/* Language switcher — same visual as a nav item */}
               <li>

@@ -5,7 +5,7 @@ export default function Certifications() {
   const c = t.certifications
 
   return (
-    <section id="certifications" className="resume section-bg">
+    <section id="certifications" className="resume">
       <div className="container">
 
         <div className="section-title">
@@ -14,12 +14,13 @@ export default function Certifications() {
 
         <div className="row">
           <div className="col-lg-12">
-            <h3 className="resume-title">{c.title}</h3>
             {c.items.map((cert, i) => (
               <div className="resume-item" key={i}>
-                <h4>{cert.name}</h4>
-                <h5>{cert.year}</h5>
-                <p><em>{cert.issuer}</em></p>
+                <span className="resume-dates">{cert.year}</span>
+                <div className="resume-item-header">
+                  <span className="resume-company">{cert.name}</span>
+                </div>
+                <p className="resume-role">{cert.issuer}</p>
               </div>
             ))}
             <p style={{ marginTop: '16px' }}>

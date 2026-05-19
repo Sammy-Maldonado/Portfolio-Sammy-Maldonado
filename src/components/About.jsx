@@ -10,6 +10,9 @@ export default function About() {
 
         <div className="section-title">
           <h2>{a.title}</h2>
+          {a.paragraphs.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
         </div>
 
         <div className="row">
@@ -51,9 +54,6 @@ export default function About() {
                 </ul>
               </div>
             </div>
-            {a.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
           </div>
         </div>
 

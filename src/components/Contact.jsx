@@ -14,17 +14,21 @@ export default function Contact() {
         </div>
 
         <div className="row justify-content-center">
-          <div className="col-lg-7 d-flex align-items-stretch">
-            <div className="info">
+          <div className="col-lg-7">
+            <div className="contact-card">
               {c.items.map(item => (
-                <div className={item.icon.split(' ')[1].replace('bi-', '')} key={item.label} style={{ marginBottom: '20px' }}>
-                  <i className={item.icon} />
-                  <h4>{item.label}:</h4>
-                  <p>
-                    {item.href
-                      ? <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">{item.value}</a>
-                      : item.value}
-                  </p>
+                <div className="contact-item" key={item.label}>
+                  <div className="contact-icon">
+                    <i className={item.icon} />
+                  </div>
+                  <div className="contact-text">
+                    <h4>{item.label}</h4>
+                    <p>
+                      {item.href
+                        ? <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer">{item.value}</a>
+                        : item.value}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

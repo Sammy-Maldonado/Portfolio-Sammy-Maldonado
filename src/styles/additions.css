@@ -62,11 +62,80 @@
 }
 
 /*--------------------------------------------------------------
+# Hero — CV download button
+--------------------------------------------------------------*/
+.hero-cv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.hero-cv-btn:hover {
+  background: #fff;
+  color: #040b14;
+  text-decoration: none;
+}
+
+.hero-cv-btn i {
+  font-size: 18px;
+}
+
+/*--------------------------------------------------------------
+# About — spacing restoration
+--------------------------------------------------------------*/
+.about .content h3 {
+  margin-bottom: 10px;
+}
+
+.about .content .fst-italic {
+  margin-bottom: 20px;
+}
+
+.about .content .row {
+  margin-bottom: 20px;
+}
+
+.about .content ul li {
+  margin-bottom: 20px;
+}
+
+.about .content p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .section-title p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.about .section-title p:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
 # Agentic Development Section
 # Styled as a standard iPortfolio section (same rhythm as Resume)
 --------------------------------------------------------------*/
 .agentic .agentic-intro {
-  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
   color: #272829;
   margin-bottom: 24px;
   max-width: 760px;
@@ -83,6 +152,7 @@
   align-items: flex-start;
   gap: 10px;
   margin-bottom: 12px;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   color: #272829;
 }
@@ -103,7 +173,7 @@
 .agentic .tool-chip {
   background: #e4edf9;
   color: #173b6c;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   padding: 4px 14px;
@@ -112,67 +182,80 @@
 }
 
 /*--------------------------------------------------------------
-# Projects — card overlay additions for POS Cloud ITD
+# Projects — elevated card design
 --------------------------------------------------------------*/
 .project-status-badge {
   display: inline-block;
-  background: #149ddd;
-  color: #fff;
+  background: #e8f4fd;
+  color: #1a6fa8;
   font-size: 12px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   padding: 3px 12px;
-  border-radius: 20px;
-  margin-bottom: 10px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 .project-tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 12px 0;
+  margin: 16px 0;
 }
 
 .project-tech-stack .tech-chip {
-  background: #e4edf9;
+  background: #f4f7fb;
   color: #173b6c;
   font-size: 12px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-radius: 4px;
+  border: 1px solid #dce8f5;
 }
 
 .project-card-inner {
-  padding: 24px;
+  padding: 28px 28px 28px 32px;
   background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.08);
-  height: 100%;
+  border-left: 4px solid #149ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.07);
+  margin-bottom: 28px;
+  transition: box-shadow 0.3s;
+}
+
+.project-card-inner:hover {
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.13);
 }
 
 .project-card-inner h4 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #050d18;
-  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
   margin-bottom: 4px;
 }
 
 .project-card-inner .project-subtitle {
-  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
   color: #149ddd;
   font-weight: 600;
   margin-bottom: 6px;
 }
 
 .project-card-inner .project-type {
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   color: #6c757d;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .project-card-inner p {
-  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
   color: #444;
   margin-bottom: 12px;
 }
@@ -183,7 +266,8 @@
 }
 
 .project-card-inner ul li {
-  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
   color: #444;
   margin-bottom: 6px;
 }
@@ -208,6 +292,19 @@
   text-decoration: none;
 }
 
+.project-card-inner .project-link-private {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0f0f0;
+  color: #6c757d;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
 /*--------------------------------------------------------------
 # Certifications — styled inline with Resume section
 --------------------------------------------------------------*/
@@ -219,6 +316,152 @@
 
 .resume .resume-item .cert-link:hover {
   color: #37b3ed;
+}
+
+/*--------------------------------------------------------------
+# Experience & Certifications — modernized timeline hierarchy
+--------------------------------------------------------------*/
+.resume .section-title {
+  margin-bottom: 20px;
+}
+
+.resume-dates {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.resume-item-header {
+  margin-bottom: 4px;
+}
+
+.resume-company {
+  font-size: 18px;
+  font-weight: 700;
+  color: #050d18;
+  font-family: "Raleway", sans-serif;
+}
+
+.resume-dates {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #149ddd;
+  background: #e8f4fd;
+  padding: 3px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.resume-role {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #149ddd;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+/* Override iportfolio.css h4/h5 styles inside resume-item */
+.resume .resume-item h4 {
+  font-size: 18px;
+}
+
+.resume .resume-item h5 {
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Contact — modern flex card (overrides float-based iportfolio.css)
+--------------------------------------------------------------*/
+.contact-card {
+  background: #fff;
+  border-radius: 6px;
+  border-left: 4px solid #149ddd;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.07);
+  padding: 32px 36px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid #f0f4f8;
+  transition: background 0.2s;
+}
+
+.contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-item:first-child {
+  padding-top: 0;
+}
+
+.contact-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-icon i {
+  font-size: 18px;
+  color: #149ddd;
+  transition: color 0.3s;
+}
+
+.contact-item:hover .contact-icon {
+  background: #149ddd;
+}
+
+.contact-item:hover .contact-icon i {
+  color: #fff;
+}
+
+.contact-text h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #050d18;
+  margin: 0 0 2px 0;
+  padding: 0;
+}
+
+.contact-text p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: #173b6c;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-text a {
+  color: #149ddd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-text a:hover {
+  color: #0d7ab5;
+}
+
+/* Neutralise old float-based rules from iportfolio.css */
+.contact .info i { float: none; }
+
+/*--------------------------------------------------------------
+# Sidebar nav — prevent lang switcher from overlapping fixed footer
+--------------------------------------------------------------*/
+#header {
+  padding-bottom: 50px;
 }
 
 /*--------------------------------------------------------------

@@ -324,7 +324,7 @@ section {
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
@@ -350,8 +350,9 @@ section {
 # About
 --------------------------------------------------------------*/
 .about .content h3 {
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 18px;
   color: #173b6c;
 }
 
@@ -441,9 +442,9 @@ section {
 .resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-family: "Raleway", sans-serif;
   color: #050d18;
   margin-bottom: 10px;
 }
