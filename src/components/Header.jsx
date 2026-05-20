@@ -12,7 +12,7 @@ const NAV_ITEMS = [
   { key: 'contact',        id: 'contact',        icon: 'bx bx-envelope' },
 ]
 
-const CV_URL = 'https://drive.google.com/file/d/1Db4XEB_nO8X6htZksyZUUnC7DRrkndrh/view?usp=sharing'
+const CV_URL = 'https://drive.google.com/file/d/1_K_lNizUGNAZdjjj5iU7IAVq_QBmQbNm/view?usp=sharing'
 
 export default function Header() {
   const { t, toggleLang } = useLang()

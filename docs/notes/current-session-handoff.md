@@ -65,7 +65,7 @@ src/
 ## CV Link
 
 Google Drive (public):
-`https://drive.google.com/file/d/1Db4XEB_nO8X6htZksyZUUnC7DRrkndrh/view?usp=sharing`
+`https://drive.google.com/file/d/1_K_lNizUGNAZdjjj5iU7IAVq_QBmQbNm/view?usp=sharing`
 
 Hardcoded in `Header.jsx` (constant `CV_URL`) and `Hero.jsx`.
 
