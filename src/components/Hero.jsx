@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useLang } from '../context/LanguageContext'
 
-const CV_URL = 'https://drive.google.com/file/d/1UpFmxlNe9VT-IoRKeQipJUpa-mWJbVBE/view?usp=sharing'
+const CV_URL = 'https://drive.google.com/file/d/1vYYsP78Lj419Lluo0JvH6qO-1BeIdsAm/view?usp=sharing'
 
 const TYPED_ITEMS = {
   en: ['Full-Stack Software Developer', 'Agentic Development Workflows', 'Cloud & Backend'],
